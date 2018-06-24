@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -136,6 +134,11 @@
             <path>
               <item name="SimpledWebContainer" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimpledWebContainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimpledWebContainer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimpledWebContainer" type="462c0819:PsiDirectoryNode" />
+              <item name="Result" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimpledWebContainer" type="b2602c69:ProjectViewProjectNode" />
@@ -343,7 +346,7 @@
       <workItem from="1526139582290" duration="204000" />
       <workItem from="1526173868601" duration="30000" />
       <workItem from="1526174008873" duration="17000" />
-      <workItem from="1529807691297" duration="8992000" />
+      <workItem from="1529807691297" duration="9145000" />
     </task>
     <task id="LOCAL-00001" summary="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架">
       <created>1529818385695</created>
@@ -352,11 +355,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529818385695</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成了对HttpRequest初步的递归子程序编写，上传结果截图">
+      <created>1529825528083</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1529825528083</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22778000" />
+    <option name="totallyTimeSpent" value="22931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -374,7 +384,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -382,7 +392,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -399,7 +409,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架" />
+    <MESSAGE value="完成了对HttpRequest初步的递归子程序编写，上传结果截图" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了对HttpRequest初步的递归子程序编写，上传结果截图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
