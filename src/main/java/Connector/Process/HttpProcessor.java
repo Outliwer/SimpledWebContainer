@@ -5,9 +5,7 @@ import Connector.HttpResponse;
 import Container.ServletProcessor;
 import Container.StaticResourceProcessor;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class HttpProcessor {
@@ -27,10 +25,13 @@ public class HttpProcessor {
             inputStream = socket.getInputStream();
             outputStream = socket.getOutputStream();
             // create httprequest
+            print(inputStream);
             httpRequest = new HttpRequest(inputStream);
+            httpRequest.parseRequest();
 
             // create httpresponse
             httpResponse = new HttpResponse(outputStream);
+
             // there need some functions to finish the httpResponse
             httpResponse.setRequest(httpRequest);
 
@@ -46,6 +47,21 @@ public class HttpProcessor {
             //close the sotket
             socket.close();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void print (InputStream is) throws UnsupportedEncodingException{
+        InputStreamReader isr =new InputStreamReader(is,"utf-8");
+        BufferedReader br = new BufferedReader(isr);
+        try {
+            int index = 0;
+            while (index < 100) {
+                System.out.println(br.readLine());
+                index ++;
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
