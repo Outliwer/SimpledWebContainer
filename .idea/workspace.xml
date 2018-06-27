@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="对于静态资源的获取并增加了Constants类">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Connector/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/index.html" />
+    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="目前找到原因为使用read将会导致不能正常accept">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Connector/HttpConnector.class" afterPath="$PROJECT_DIR$/target/classes/Connector/HttpConnector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/HttpConnector.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/HttpConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Container/ServletProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/Container/ServletProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Container/StaticResourceProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/Container/StaticResourceProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="281">
+              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#287#303#0" expanded="true" />
@@ -39,8 +35,8 @@
       <file leaf-file-name="HttpProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="-39">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +67,8 @@
       <file leaf-file-name="HttpResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="123">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#302#303#0" expanded="true" />
                 <element signature="e#344#345#0" expanded="true" />
@@ -103,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpConnector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HttpConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="175">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,6 +136,8 @@
       <find>parseRequest</find>
       <find>requestURI</find>
       <find>HttpResponse</find>
+      <find>readline</find>
+      <find>convertStreamToCharArray</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +153,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/startup/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/Process/HttpRequestProcess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Container/StaticResourceProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Container/ServletProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" />
@@ -163,6 +160,7 @@
         <option value="$PROJECT_DIR$/webroot/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/HttpConnector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
       </list>
     </option>
   </component>
@@ -411,7 +409,7 @@
       <workItem from="1526173868601" duration="30000" />
       <workItem from="1526174008873" duration="17000" />
       <workItem from="1529807691297" duration="9601000" />
-      <workItem from="1530111878225" duration="2266000" />
+      <workItem from="1530111878225" duration="3827000" />
     </task>
     <task id="LOCAL-00001" summary="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架">
       <created>1529818385695</created>
@@ -434,11 +432,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529825659978</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="对于静态资源的获取并增加了Constants类,但HttpConnector存在部分问题待修改">
+      <created>1530114818340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1530114818341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25653000" />
+    <option name="totallyTimeSpent" value="27214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -483,7 +488,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架" />
     <MESSAGE value="完成了对HttpRequest初步的递归子程序编写，上传结果截图" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了对HttpRequest初步的递归子程序编写，上传结果截图" />
+    <MESSAGE value="对于静态资源的获取并增加了Constants类,但HttpConnector存在部分问题待修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="对于静态资源的获取并增加了Constants类,但HttpConnector存在部分问题待修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -881,14 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Container/StaticResourceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/net/ServerSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -905,20 +903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="123">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#302#303#0" expanded="true" />
             <element signature="e#344#345#0" expanded="true" />
@@ -928,23 +916,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Container/StaticResourceProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="31" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#287#303#0" expanded="true" />
-            <element signature="e#390#406#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="175">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#287#303#0" expanded="true" />
+            <element signature="e#390#406#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

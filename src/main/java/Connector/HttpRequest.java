@@ -24,7 +24,7 @@ public class HttpRequest {
      * get the tokens
      */
     public HttpRequest(InputStream inputStream) {
-        tokens = convertStreamToCharArray(inputStream);
+        //tokens = convertStreamToCharArray(inputStream);
     }
 
     /*

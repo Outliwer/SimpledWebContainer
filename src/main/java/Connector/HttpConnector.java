@@ -9,31 +9,30 @@ import java.net.Socket;
 
 public class HttpConnector implements Runnable {
 
-    volatile boolean stop = false;
+    volatile boolean stopped;
 
     public void run() {
         ServerSocket serverSocket = null;
-        int port = 8000;
+        int port = 8080;
         try {
-            serverSocket = new ServerSocket(port,1, InetAddress.getByName("127.0.0.1"));
-        }catch (IOException e){
+            serverSocket =  new ServerSocket(port, 1, InetAddress.getByName("127.0.0.1"));
+        } catch (IOException e) {
             e.printStackTrace();
-            return;
+            System.exit(1);
         }
-        while (!stop){
-            //waiting the request
+        while (!stopped) {
             Socket socket = null;
             try {
-                System.out.println("waiting the request");
                 socket = serverSocket.accept();
-            } catch (Exception e){
+            } catch (Exception e) {
                 continue;
             }
-            HttpProcessor httpRequestProcess = new HttpProcessor(this);
-            httpRequestProcess.process(socket);
+            HttpProcessor processor = new HttpProcessor(this);
+            processor.process(socket);
         }
     }
-    public void start(){
+
+    public void start() {
         Thread thread = new Thread(this);
         thread.start();
     }
