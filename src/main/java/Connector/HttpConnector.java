@@ -13,16 +13,18 @@ public class HttpConnector implements Runnable {
 
     public void run() {
         ServerSocket serverSocket = null;
-        int port = 8080;
+        int port = 8000;
         try {
             serverSocket = new ServerSocket(port,1, InetAddress.getByName("127.0.0.1"));
         }catch (IOException e){
             e.printStackTrace();
+            return;
         }
         while (!stop){
             //waiting the request
             Socket socket = null;
             try {
+                System.out.println("waiting the request");
                 socket = serverSocket.accept();
             } catch (Exception e){
                 continue;

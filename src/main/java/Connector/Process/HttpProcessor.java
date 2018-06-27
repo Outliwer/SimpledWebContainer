@@ -25,7 +25,7 @@ public class HttpProcessor {
             inputStream = socket.getInputStream();
             outputStream = socket.getOutputStream();
             // create httprequest
-//            print(inputStream);
+            // print(inputStream);
             httpRequest = new HttpRequest(inputStream);
             httpRequest.parseRequest();
 
