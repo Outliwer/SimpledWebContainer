@@ -13,6 +13,7 @@ public class HttpProcessor {
     private  HttpConnector httpConnector = null;
     private HttpRequest httpRequest = null;
     private HttpResponse httpResponse = null;
+    private static int BUFFER_SIZE = 4096;
 
     public HttpProcessor(HttpConnector httpConnector) {
         this.httpConnector = httpConnector;
@@ -26,7 +27,7 @@ public class HttpProcessor {
             outputStream = socket.getOutputStream();
             // create httprequest
             // print(inputStream);
-            httpRequest = new HttpRequest(inputStream);
+            httpRequest = new HttpRequest(inputStream,2048);
             httpRequest.parseRequest();
 
             // create httpresponse

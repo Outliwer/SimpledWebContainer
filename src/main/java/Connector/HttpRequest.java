@@ -1,9 +1,9 @@
 package Connector;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,18 +14,22 @@ public class HttpRequest {
     //the param in the URI
     private Map<String,String> uriParamMap = new HashMap<String, String>();
     //the tokens of the inputStream
-    char[] tokens;
+    InputStream tokens;
     //the offset of the tokens
     int currentToken = -1;
     //the value of the token
     char current;
+    //the buffer
+    byte[] buffer;
 
     /*
      * get the tokens
      */
-    public HttpRequest(InputStream inputStream) {
-        //tokens = convertStreamToCharArray(inputStream);
+    public HttpRequest(InputStream inputStream,int bufferSize) throws IOException {
+        buffer = new byte[bufferSize];
+        tokens = inputStream;
     }
+
 
     /*
      * get the URI
@@ -181,27 +185,42 @@ public class HttpRequest {
         }
     }
 
-    /*
-     * change the inputStream to the CharArray
-     */
-    private char[] convertStreamToCharArray(InputStream is) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-        StringBuilder sb = new StringBuilder();
-        String line = null;
-        try {
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + ' ');
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return sb.toString().toCharArray();
-    }
 
+//    private static byte[] toByteArray(InputStream input)
+//            throws IOException {
+//        ByteArrayOutputStream output = new ByteArrayOutputStream();
+//        copy(input, output);
+//        return output.toByteArray();
+//    }
+//
+//    private static int copy(InputStream input, OutputStream output)
+//            throws IOException {
+//        long count = copyLarge(input, output);
+//        if (count > 2147483647L) {
+//            return -1;
+//        }
+//        return (int)count;
+//    }
+//
+//    private static long copyLarge(InputStream input, OutputStream output)
+//            throws IOException {
+//        byte[] buffer = new byte[4096];
+//        long count = 0L;
+//        int n = 0;
+//        while (-1 != (n = input.read(buffer))) {
+//            output.write(buffer, 0, n);
+//            count += n;
+//        }
+//        return count;
+//    }
+//
+//    private char[] convertStreamToCharArray(InputStream inputStream) throws IOException {
+//        byte[] bytes = toByteArray(inputStream);
+//        Charset cs = Charset.forName("UTF-8");
+//        ByteBuffer bb = ByteBuffer.allocate(bytes.length);
+//        bb.put(bytes);
+//        bb.flip();
+//        CharBuffer cb = cs.decode(bb);
+//        return cb.array();
+//    }
 }
