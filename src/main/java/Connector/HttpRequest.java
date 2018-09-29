@@ -1,16 +1,16 @@
 package Connector;
 
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
 public class HttpRequest {
 
-    //the param
+    /**
+     *   the param
+     */
     private Map<String,String> paramMap = new HashMap<String, String>();
+
     //the param in the URI
     private Map<String,String> uriParamMap = new HashMap<String, String>();
     //the tokens of the inputStream
@@ -21,6 +21,15 @@ public class HttpRequest {
     char current;
     //the buffer
     byte[] buffer;
+    /**
+     * Last valid byte.
+     */
+    private int count;
+
+    /**
+     * Position in the buffer.
+     */
+    private int pos;
 
     /*
      * get the tokens
@@ -42,14 +51,13 @@ public class HttpRequest {
     /*
      * the next token
      */
-    private void nextToken(){
-        if (currentToken < tokens.length){
-            currentToken ++;
-            current = tokens[currentToken];
-        } else {
-            // TODO: error message need
-            System.out.println("the end of the tokens");
+    private int nextToken(){
+        if (pos >= count) {
+            fill();
+            if (pos >= count)
+                return -1;
         }
+        return buffer[pos++] & 0xff;
     }
     /*
      * parse

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="使用另外一种思路">
+    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/Connector/Process/HttpProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,12 +19,12 @@
       <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="317">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#273#289#0" expanded="true" />
-                <element signature="e#376#392#0" expanded="true" />
+                <element signature="e#203#219#0" expanded="true" />
+                <element signature="e#307#323#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,6 +123,7 @@
       <find>the input is null</find>
       <find>paramMap.size()</find>
       <find>the input is wrong</find>
+      <find>currentToken</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -413,7 +413,7 @@
       <workItem from="1529807691297" duration="9601000" />
       <workItem from="1530111878225" duration="3827000" />
       <workItem from="1538123122865" duration="155000" />
-      <workItem from="1538123349221" duration="4775000" />
+      <workItem from="1538123349221" duration="5540000" />
     </task>
     <task id="LOCAL-00001" summary="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架">
       <created>1529818385695</created>
@@ -443,11 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530114818341</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="使用另外一种思路">
+      <created>1538132148062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538132148062</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32144000" />
+    <option name="totallyTimeSpent" value="32909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -493,7 +500,8 @@
     <MESSAGE value="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架" />
     <MESSAGE value="完成了对HttpRequest初步的递归子程序编写，上传结果截图" />
     <MESSAGE value="对于静态资源的获取并增加了Constants类,但HttpConnector存在部分问题待修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="对于静态资源的获取并增加了Constants类,但HttpConnector存在部分问题待修改" />
+    <MESSAGE value="使用另外一种思路" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用另外一种思路" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,8 +573,8 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#289#0" expanded="true" />
-            <element signature="e#376#392#0" expanded="true" />
+            <element signature="e#203#219#0" expanded="true" />
+            <element signature="e#307#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -624,8 +632,8 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#289#0" expanded="true" />
-            <element signature="e#376#392#0" expanded="true" />
+            <element signature="e#203#219#0" expanded="true" />
+            <element signature="e#307#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -703,8 +711,8 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#289#0" expanded="true" />
-            <element signature="e#376#392#0" expanded="true" />
+            <element signature="e#203#219#0" expanded="true" />
+            <element signature="e#307#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -754,8 +762,8 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#289#0" expanded="true" />
-            <element signature="e#376#392#0" expanded="true" />
+            <element signature="e#203#219#0" expanded="true" />
+            <element signature="e#307#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,12 +925,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="317">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#273#289#0" expanded="true" />
-            <element signature="e#376#392#0" expanded="true" />
+            <element signature="e#203#219#0" expanded="true" />
+            <element signature="e#307#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
