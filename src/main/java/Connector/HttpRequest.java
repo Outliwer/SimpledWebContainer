@@ -11,47 +11,42 @@ public class HttpRequest {
      */
     private Map<String,String> paramMap = new HashMap<String, String>();
 
-    //the param in the URI
+    /**
+     *  the param in the URI
+     */
     private Map<String,String> uriParamMap = new HashMap<String, String>();
-    //the tokens of the inputStream
-    InputStream tokens;
-    //the offset of the tokens
+
+    /**
+     *  the tokens of the inputStream
+     */
+    InputStream inputStream;
+
+    /**
+     *  the offset of the tokens
+     */
     int currentToken = -1;
-    //the value of the token
-    char current;
-    //the buffer
+
+    /**
+     * the buffer
+     */
+    
     byte[] buffer;
     /**
      * Last valid byte.
      */
     private int count;
-
+    
     /**
      * Position in the buffer.
      */
     private int pos;
 
-    /*
-     * get the tokens
+    /**
+     * Read byte
+     * @return
+     * @throws IOException
      */
-    public HttpRequest(InputStream inputStream,int bufferSize) throws IOException {
-        buffer = new byte[bufferSize];
-        tokens = inputStream;
-    }
-
-
-    /*
-     * get the URI
-     */
-    public String getRequestURI() {
-        System.out.println("paramMap.size() " + paramMap.size());
-        return paramMap.get("requestURI");
-    }
-
-    /*
-     * the next token
-     */
-    private int nextToken(){
+    private int read() throws IOException{
         if (pos >= count) {
             fill();
             if (pos >= count)
@@ -59,17 +54,29 @@ public class HttpRequest {
         }
         return buffer[pos++] & 0xff;
     }
-    /*
-     * parse
+
+    /**
+     * Fill the internal buffer by the inputStram
+     * @throws IOException
      */
-    public void parseRequest(){
-        if (tokens == null || tokens.length == 0){
-            // TODO: error message need
-            System.out.println("the input is null");
-            return;
+
+    private void fill() throws IOException{
+        pos = 0;
+        count = 0;
+        int nRead = inputStream.read(buffer, 0, buffer.length);
+        if (nRead > 0) {
+            count = nRead;
         }
+    }
+
+    /**
+     * parse the request
+     * @throws IOException
+     */
+    public void parseRequest() throws IOException{
         // start
-        nextToken();
+        int current = read();
+        System.out.println("test : " + current);
         if (current == 'G'){
             parseGetMethod();
         } else if (current == 'P'){
@@ -79,6 +86,24 @@ public class HttpRequest {
             System.out.println("the input is wrong");
             return;
         }
+    }
+
+
+    /*
+     * get the tokens
+     */
+    public HttpRequest(InputStream inputStream,int bufferSize) throws IOException {
+        buffer = new byte[bufferSize];
+        this.inputStream = inputStream;
+    }
+
+
+    /*
+     * get the URI
+     */
+    public String getRequestURI() {
+        System.out.println("paramMap.size() " + paramMap.size());
+        return paramMap.get("requestURI");
     }
 
     /*
