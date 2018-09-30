@@ -31,6 +31,7 @@ public class HttpRequest {
      */
     
     byte[] buffer;
+
     /**
      * Last valid byte.
      */
@@ -42,17 +43,26 @@ public class HttpRequest {
     private int pos;
 
     /**
+     * get the current char
+     */
+    private char current;
+
+    /**
      * Read byte
      * @return
      * @throws IOException
      */
-    private int read() throws IOException{
+    private void nextToken() throws IOException{
         if (pos >= count) {
             fill();
-            if (pos >= count)
-                return -1;
+            if (pos >= count) {
+                // TODO: add the Exception
+                System.out.println("too many characters");
+                current = (char)-1;
+                return;
+            }
         }
-        return buffer[pos++] & 0xff;
+        current = (char)(buffer[pos++] & 0xff);
     }
 
     /**
@@ -75,8 +85,7 @@ public class HttpRequest {
      */
     public void parseRequest() throws IOException{
         // start
-        int current = read();
-        System.out.println("test : " + current);
+        nextToken();
         if (current == 'G'){
             parseGetMethod();
         } else if (current == 'P'){
@@ -109,7 +118,7 @@ public class HttpRequest {
     /*
      * parse Get
      */
-    private void parseGetMethod(){
+    private void parseGetMethod() throws IOException {
         nextToken();
         if (current == 'E'){
             nextToken();
@@ -132,7 +141,7 @@ public class HttpRequest {
     /*
      * parse URI
      */
-    private void parseURI(){
+    private void parseURI() throws IOException {
         nextToken();
         while (current == ' ' || current == '\t'){
             nextToken();
@@ -168,7 +177,7 @@ public class HttpRequest {
     /*
      * parse the param of the uriRequest
      */
-    private void parseParamUriRequest(){
+    private void parseParamUriRequest() throws IOException {
         StringBuilder sb_key = new StringBuilder();
         StringBuilder sb_value = new StringBuilder();
         nextToken();
@@ -192,7 +201,7 @@ public class HttpRequest {
     /*
      * parse the version of the Http
      */
-    private void parseHttpVersion(){
+    private void parseHttpVersion() throws IOException {
         nextToken();
         while (current == ' ' || current == '\t'){
             nextToken();

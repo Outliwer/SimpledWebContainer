@@ -28,6 +28,7 @@ public class HttpResponse {
         try {
             fis = new FileInputStream(file);
             int ch = fis.read(bytes, 0, BUFFER_SIZE);
+            output.write(bytes);
             while (ch!=-1) {
                 output.write(bytes, 0, ch);
                 ch = fis.read(bytes, 0, BUFFER_SIZE);
@@ -40,8 +41,9 @@ public class HttpResponse {
                     "<h1>File Not Found</h1>";
             output.write(errorMessage.getBytes());
         } finally {
-            if (fis!=null)
+            if (fis!=null) {
                 fis.close();
+            }
         }
     }
 }
