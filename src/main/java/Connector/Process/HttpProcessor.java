@@ -45,7 +45,7 @@ public class HttpProcessor {
                 processor.process(httpRequest, httpResponse);
             }
 
-            //close the sotket
+            //close the socket
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
