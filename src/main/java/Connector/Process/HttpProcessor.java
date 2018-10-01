@@ -33,6 +33,8 @@ public class HttpProcessor {
             // create httpresponse
             httpResponse = new HttpResponse(outputStream);
 
+            //add the check
+
             // there need some functions to finish the httpResponse
             httpResponse.setRequest(httpRequest);
 
