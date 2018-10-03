@@ -1,14 +1,46 @@
 package Connector;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HttpResponse {
-    //the request
+
+    /**
+     * the request
+     */
     private HttpRequest httpRequest;
-    //set the BUFFER_SIZE equal 4096
+
+    /**
+     * set the BUFFER_SIZE equal 4096
+     */
     public static int BUFFER_SIZE = 4096;
-    //output the result
+
+    /**
+     * output the result
+     */
     OutputStream output;
+
+    /**
+     * check the outputStream is Committed
+     */
+    private boolean committed = false;
+
+    /**
+     * the headers of the response
+     */
+    private HashMap headers = new HashMap();
+
+    /**
+     * the length of the response
+     */
+    private int contentLength;
+
+    /**
+     * the contentType of response
+     */
+    private String contentType;
+
 
     public HttpResponse(OutputStream outputStream) {
         this.output = outputStream;
@@ -45,5 +77,43 @@ public class HttpResponse {
                 fis.close();
             }
         }
+    }
+
+    public void setHead(String name, String value) {
+        if (isCommitted()){
+            return;
+        }
+        ArrayList values = new ArrayList();
+        values.add(value);
+        synchronized (headers) {
+            headers.put(name, values);
+        }
+        String match = name.toLowerCase();
+        if (match.equals("content-length")) {
+            int contentLength = -1;
+            try {
+                contentLength = Integer.parseInt(value);
+            }
+            catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+            if (contentLength >= 0)
+                setContentLength(contentLength);
+        }
+        else if (match.equals("content-type")) {
+            setContentType(value);
+        }
+    }
+
+    private boolean isCommitted(){
+        return committed;
+    }
+
+    private void setContentLength(int length){
+        this.contentLength = length;
+    }
+
+    private void setContentType(String type){
+        this.contentType = type;
     }
 }
