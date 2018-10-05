@@ -79,7 +79,12 @@ public class HttpResponse {
         }
     }
 
-    public void setHead(String name, String value) {
+    /**
+     * the basic function to set the response header
+     * @param name
+     * @param value
+     */
+    public void setHeaders(String name, String value) {
         if (isCommitted()){
             return;
         }
@@ -105,6 +110,19 @@ public class HttpResponse {
         }
     }
 
+
+    /**
+     * the function to join the response
+     * @throws IOException
+     */
+    public void sendHeaders() throws IOException{
+
+    }
+
+    /**
+     * some function to get the value
+     */
+
     private boolean isCommitted(){
         return committed;
     }
@@ -115,5 +133,9 @@ public class HttpResponse {
 
     private void setContentType(String type){
         this.contentType = type;
+    }
+
+    private OutputStream getOutputStream(){
+        return output;
     }
 }
