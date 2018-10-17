@@ -116,7 +116,10 @@ public class HttpResponse {
      * @throws IOException
      */
     public void sendHeaders() throws IOException{
-
+        if (isCommitted()){
+            return;
+        }
+        committed = true;
     }
 
     /**

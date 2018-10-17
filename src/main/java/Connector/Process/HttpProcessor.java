@@ -42,7 +42,7 @@ public class HttpProcessor {
 
             // there need some functions to finish the httpResponse
             httpResponse.setRequest(httpRequest);
-            httpResponse.setHead("Server", "Servlet Container");
+            httpResponse.setHeaders("Server", "Servlet Container");
 
             //check whether the request is a static source
             if (httpRequest.getRequestURI().startsWith("/servlet/")){
