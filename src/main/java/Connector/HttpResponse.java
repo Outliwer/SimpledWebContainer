@@ -41,7 +41,6 @@ public class HttpResponse {
      */
     private String contentType;
 
-
     public HttpResponse(OutputStream outputStream) {
         this.output = outputStream;
     }
@@ -59,12 +58,16 @@ public class HttpResponse {
         File file = new File(Constants.WEB_ROOT,httpRequest.getRequestURI());
         try {
             fis = new FileInputStream(file);
+            int messageLength = 0;
+            String fileType = file.getName();
             int ch = fis.read(bytes, 0, BUFFER_SIZE);
-            output.write(bytes);
             while (ch!=-1) {
-                output.write(bytes, 0, ch);
+                messageLength += ch;
                 ch = fis.read(bytes, 0, BUFFER_SIZE);
             }
+            setHeaders("content-length",String.valueOf(messageLength));
+            //TODO: How to find the type
+
         } catch (FileNotFoundException e) {
             String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
                     "Content-Type: text/html\r\n" +
@@ -78,6 +81,8 @@ public class HttpResponse {
             }
         }
     }
+
+
 
     /**
      * the basic function to set the response header
