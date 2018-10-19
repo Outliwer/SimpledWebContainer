@@ -1,7 +1,7 @@
 package Util;
 
 public enum  HttpResponseMessage{
-    SC_OK("OK",200),SC_NOT_FOUND("Not Found",404);
+    SC_OK("OK",200),SC_NOT_FOUND("File Not Found",404);
 
     /**
      * the message of the response

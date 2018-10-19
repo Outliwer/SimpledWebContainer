@@ -1,5 +1,7 @@
 package Connector;
 
+import Util.ContentTypeFind;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,15 +61,23 @@ public class HttpResponse {
         try {
             fis = new FileInputStream(file);
             int messageLength = 0;
-            String fileType = file.getName();
+            String fileName = file.getName();
             int ch = fis.read(bytes, 0, BUFFER_SIZE);
             while (ch!=-1) {
                 messageLength += ch;
                 ch = fis.read(bytes, 0, BUFFER_SIZE);
             }
             setHeaders("content-length",String.valueOf(messageLength));
-            //TODO: How to find the type
+            setHeaders("content-type", ContentTypeFind.findTheType(fileName));
+            // send the header
 
+            // get the content
+            fis = new FileInputStream(file);
+            ch = fis.read(bytes, 0, BUFFER_SIZE);
+            while (ch!=-1){
+                output.write(bytes);
+                ch = fis.read(bytes, 0, BUFFER_SIZE);
+            }
         } catch (FileNotFoundException e) {
             String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
                     "Content-Type: text/html\r\n" +
