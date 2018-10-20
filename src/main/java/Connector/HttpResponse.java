@@ -70,7 +70,7 @@ public class HttpResponse {
             setHeaders("content-length",String.valueOf(messageLength));
             setHeaders("content-type", ContentTypeFind.findTheType(fileName));
             // send the header
-
+            sendHeaders();
             // get the content
             fis = new FileInputStream(file);
             ch = fis.read(bytes, 0, BUFFER_SIZE);
@@ -128,12 +128,13 @@ public class HttpResponse {
 
     /**
      * the function to join the response
-     * @throws IOException
      */
-    public void sendHeaders() throws IOException{
+    public void sendHeaders(){
         if (isCommitted()){
             return;
         }
+        StringBuilder sb = new StringBuilder();
+
         committed = true;
     }
 
