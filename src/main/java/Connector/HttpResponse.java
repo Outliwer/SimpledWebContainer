@@ -1,10 +1,11 @@
 package Connector;
 
 import Util.ContentTypeFind;
+import Util.HttpResponseMessage;
+import Util.MessageConstruction;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class HttpResponse {
 
@@ -31,7 +32,7 @@ public class HttpResponse {
     /**
      * the headers of the response
      */
-    private HashMap headers = new HashMap();
+    private HashMap<String, List<String>> headers = new HashMap();
 
     /**
      * the length of the response
@@ -42,6 +43,12 @@ public class HttpResponse {
      * the contentType of response
      */
     private String contentType;
+
+    /**
+     * the status of response
+     */
+    private int status;
+
 
     public HttpResponse(OutputStream outputStream) {
         this.output = outputStream;
@@ -70,6 +77,7 @@ public class HttpResponse {
             setHeaders("content-length",String.valueOf(messageLength));
             setHeaders("content-type", ContentTypeFind.findTheType(fileName));
             // send the header
+            this.status = HttpResponseMessage.SC_OK.getStatus();
             sendHeaders();
             // get the content
             fis = new FileInputStream(file);
@@ -103,7 +111,7 @@ public class HttpResponse {
         if (isCommitted()){
             return;
         }
-        ArrayList values = new ArrayList();
+        ArrayList<String> values = new ArrayList<String>();
         values.add(value);
         synchronized (headers) {
             headers.put(name, values);
@@ -129,12 +137,40 @@ public class HttpResponse {
     /**
      * the function to join the response
      */
-    public void sendHeaders(){
+    public void sendHeaders() throws IOException {
         if (isCommitted()){
             return;
         }
         StringBuilder sb = new StringBuilder();
-
+        /**
+         * 详细构成可以参见
+         * https://github.com/Outliwer/SimpledWebContainer/issues/5
+         */
+        //TODO: how to find the status
+        if (httpRequest != null){
+            sb.append("HTTP/");
+            sb.append(httpRequest.getHttpVersion());
+        } else {
+            sb.append(MessageConstruction.getDefaultVersion());
+        }
+        sb.append(MessageConstruction.getBlank());
+        sb.append(status);
+        sb.append(MessageConstruction.getBlank());
+        sb.append(HttpResponseMessage.SC_OK.getMessage(status));
+        sb.append(MessageConstruction.getCRLF());
+        //header construction
+        for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
+            sb.append(entry.getKey());
+            sb.append(MessageConstruction.getColon());
+            List<String> temp = entry.getValue();
+            for (String tempValue : temp){
+                sb.append(MessageConstruction.getBlank());
+                sb.append(tempValue);
+            }
+            sb.append(MessageConstruction.getCRLF());
+        }
+        sb.append(MessageConstruction.getCRLF());
+        output.write(String.valueOf(sb).getBytes());
         committed = true;
     }
 

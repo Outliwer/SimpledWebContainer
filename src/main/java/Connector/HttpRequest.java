@@ -106,12 +106,14 @@ public class HttpRequest {
         this.inputStream = inputStream;
     }
 
+    public String getHttpVersion(){
+        return paramMap.get("httpVersion");
+    }
 
     /*
      * get the URI
      */
     public String getRequestURI() {
-        System.out.println("paramMap.size() " + paramMap.size());
         return paramMap.get("requestURI");
     }
 
@@ -214,55 +216,14 @@ public class HttpRequest {
                 nextToken();
             }
             nextToken();
-            while (current != '\n' && current != '\t' && current != ' '){
+            while (current != '\n' && current != '\t' && current != ' ' && current != '\r'){
                 sb_value.append(current);
                 nextToken();
             }
-            paramMap.put(String.valueOf(sb_key),String.valueOf(sb_value));
+            paramMap.put("httpVersion",String.valueOf(sb_value));
             // TODO: current message need
             System.out.println(" HTTP Version : " +String.valueOf(sb_key)+ " : " +String.valueOf(sb_value));
             nextToken();
-            // TODO: 下一次分析开始  H
-//            System.out.println(current);
         }
     }
-
-
-//    private static byte[] toByteArray(InputStream input)
-//            throws IOException {
-//        ByteArrayOutputStream output = new ByteArrayOutputStream();
-//        copy(input, output);
-//        return output.toByteArray();
-//    }
-//
-//    private static int copy(InputStream input, OutputStream output)
-//            throws IOException {
-//        long count = copyLarge(input, output);
-//        if (count > 2147483647L) {
-//            return -1;
-//        }
-//        return (int)count;
-//    }
-//
-//    private static long copyLarge(InputStream input, OutputStream output)
-//            throws IOException {
-//        byte[] buffer = new byte[4096];
-//        long count = 0L;
-//        int n = 0;
-//        while (-1 != (n = input.read(buffer))) {
-//            output.write(buffer, 0, n);
-//            count += n;
-//        }
-//        return count;
-//    }
-//
-//    private char[] convertStreamToCharArray(InputStream inputStream) throws IOException {
-//        byte[] bytes = toByteArray(inputStream);
-//        Charset cs = Charset.forName("UTF-8");
-//        ByteBuffer bb = ByteBuffer.allocate(bytes.length);
-//        bb.put(bytes);
-//        bb.flip();
-//        CharBuffer cb = cs.decode(bb);
-//        return cb.array();
-//    }
 }
