@@ -2,8 +2,8 @@ package Connector.Process;
 import Connector.HttpConnector;
 import Connector.HttpRequest;
 import Connector.HttpResponse;
-import Container.ServletProcessor;
-import Container.StaticResourceProcessor;
+import Container.core.ServletProcessor;
+import Container.core.StaticResourceProcessor;
 
 import java.io.*;
 import java.net.Socket;

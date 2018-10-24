@@ -1,4 +1,4 @@
-package Container;
+package Container.core;
 
 import Connector.HttpRequest;
 import Connector.HttpResponse;
