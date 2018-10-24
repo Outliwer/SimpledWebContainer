@@ -1,4 +1,4 @@
-package Connector;
+package Connector.request;
 
 import java.io.*;
 import java.util.HashMap;

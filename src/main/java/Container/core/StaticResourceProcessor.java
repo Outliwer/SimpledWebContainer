@@ -1,7 +1,7 @@
 package Container.core;
 
-import Connector.HttpRequest;
-import Connector.HttpResponse;
+import Connector.request.HttpRequest;
+import Connector.response.HttpResponse;
 
 import java.io.IOException;
 

@@ -1,7 +1,7 @@
-package Connector.Process;
+package Connector.process;
 import Connector.HttpConnector;
-import Connector.HttpRequest;
-import Connector.HttpResponse;
+import Connector.request.HttpRequest;
+import Connector.response.HttpResponse;
 import Container.core.ServletProcessor;
 import Container.core.StaticResourceProcessor;
 

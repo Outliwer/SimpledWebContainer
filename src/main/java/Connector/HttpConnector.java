@@ -1,6 +1,6 @@
 package Connector;
 
-import Connector.Process.HttpProcessor;
+import Connector.process.HttpProcessor;
 
 import java.io.IOException;
 import java.net.InetAddress;

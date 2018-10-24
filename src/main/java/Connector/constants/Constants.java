@@ -1,4 +1,4 @@
-package Connector;
+package Connector.constants;
 
 import java.io.File;
 

@@ -11,11 +11,18 @@ public class WebClassLoader {
      */
 
     /**
+     * the loaderClass
+     */
+    private String loaderClass;
+    /**
      * create a classloader
      * @return
      */
-    private WebClassLoader createClassLoader(){
+    private WebClassLoader createClassLoader() throws Exception{
         WebClassLoader classLoader = null;
+        Class clazz = Class.forName(loaderClass);
         return classLoader;
     }
+
+
 }

@@ -1,5 +1,7 @@
-package Connector;
+package Connector.response;
 
+import Connector.constants.Constants;
+import Connector.request.HttpRequest;
 import Util.ContentTypeFind;
 import Util.HttpResponseMessage;
 import Util.MessageConstruction;
