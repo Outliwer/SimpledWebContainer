@@ -1,6 +1,9 @@
 package Connector.request;
 
+import javax.servlet.http.Cookie;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +49,11 @@ public class HttpRequest {
      * get the current char
      */
     private char current;
+
+    /**
+     * the cookies of the request
+     */
+    private ArrayList<Cookie> cookies = new ArrayList<Cookie>();
 
     /**
      * Read byte
@@ -106,16 +114,6 @@ public class HttpRequest {
         this.inputStream = inputStream;
     }
 
-    public String getHttpVersion(){
-        return paramMap.get("httpVersion");
-    }
-
-    /*
-     * get the URI
-     */
-    public String getRequestURI() {
-        return paramMap.get("requestURI");
-    }
 
     /*
      * parse Get
@@ -225,5 +223,71 @@ public class HttpRequest {
             System.out.println(" HTTP Version : " +String.valueOf(sb_key)+ " : " +String.valueOf(sb_value));
             nextToken();
         }
+    }
+
+    /**
+     * add the cookie
+     * @param cookie
+     */
+    private void addCookie(Cookie cookie){
+
+    }
+
+    public String getAuthType() {
+        return null;
+    }
+
+    public Cookie[] getCookies() {
+        if (cookies.size() == 0){
+            return null;
+        } else {
+            return (Cookie[])cookies.toArray();
+        }
+    }
+
+    public long getDateHeader(String s) {
+        return 0;
+    }
+
+    public String getHeader(String s) {
+        return null;
+    }
+
+    public Enumeration<String> getHeaders(String s) {
+        return null;
+    }
+
+    public Enumeration<String> getHeaderNames() {
+        return null;
+    }
+
+    public int getIntHeader(String s) {
+        return 0;
+    }
+
+    public String getHttpVersion(){
+        return paramMap.get("httpVersion");
+    }
+
+    /*
+     * get the URI
+     */
+    public String getRequestURI() {
+        return paramMap.get("requestURI");
+    }
+
+    /**
+     * get the method
+     */
+    public String getMethod() {
+        return paramMap.get("METHOD");
+    }
+
+    public String getPathInfo() {
+        return null;
+    }
+
+    public String getPathTranslated() {
+        return null;
     }
 }

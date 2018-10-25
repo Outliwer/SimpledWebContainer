@@ -45,7 +45,7 @@ public class HttpProcessor {
             httpResponse.setHeaders("Server", "Servlet Container");
 
             //check whether the request is a static source
-            if (httpRequest.getRequestURI().startsWith("/servlet/")){
+            if (httpRequest.getRequestURI().startsWith("servlet/")){
                 ServletProcessor processor = new ServletProcessor();
                 processor.process(httpRequest, httpResponse);
             } else {

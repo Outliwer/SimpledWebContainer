@@ -2,61 +2,65 @@ package Connector.facade;
 
 import Connector.request.HttpRequest;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
-import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
+import javax.servlet.*;
+import javax.servlet.http.*;
 
 public class HttpRequestFacade implements HttpServletRequest {
 
+    /**
+     * the request of servlet
+     */
+    private HttpRequest httpRequest;
 
     public HttpRequestFacade(HttpRequest httpRequest) {
+        this.httpRequest = httpRequest;
     }
 
     public String getAuthType() {
-        return null;
+        return httpRequest.getAuthType();
     }
 
     public Cookie[] getCookies() {
-        return new Cookie[0];
+        return httpRequest.getCookies();
     }
 
     public long getDateHeader(String s) {
-        return 0;
+        return httpRequest.getDateHeader(s);
     }
 
     public String getHeader(String s) {
-        return null;
+        return httpRequest.getHeader(s);
     }
 
     public Enumeration<String> getHeaders(String s) {
-        return null;
+        return httpRequest.getHeaders(s);
     }
 
     public Enumeration<String> getHeaderNames() {
-        return null;
+        return httpRequest.getHeaderNames();
     }
 
     public int getIntHeader(String s) {
-        return 0;
+        return httpRequest.getIntHeader(s);
     }
 
     public String getMethod() {
-        return null;
+        return httpRequest.getMethod();
     }
 
     public String getPathInfo() {
-        return null;
+        return httpRequest.getPathInfo();
     }
 
     public String getPathTranslated() {
-        return null;
+        return httpRequest.getPathTranslated();
     }
 
     public String getContextPath() {
@@ -135,17 +139,6 @@ public class HttpRequestFacade implements HttpServletRequest {
 
     }
 
-    public Collection<Part> getParts() throws IOException, ServletException {
-        return null;
-    }
-
-    public Part getPart(String s) throws IOException, ServletException {
-        return null;
-    }
-
-    public <T extends HttpUpgradeHandler> T upgrade(Class<T> aClass) throws IOException, ServletException {
-        return null;
-    }
 
     public Object getAttribute(String s) {
         return null;
@@ -167,10 +160,6 @@ public class HttpRequestFacade implements HttpServletRequest {
         return 0;
     }
 
-    public long getContentLengthLong() {
-        return 0;
-    }
-
     public String getContentType() {
         return null;
     }
@@ -183,7 +172,7 @@ public class HttpRequestFacade implements HttpServletRequest {
         return null;
     }
 
-    public Enumeration<String> getParameterNames() {
+    public Enumeration getParameterNames() {
         return null;
     }
 
@@ -191,7 +180,7 @@ public class HttpRequestFacade implements HttpServletRequest {
         return new String[0];
     }
 
-    public Map<String, String[]> getParameterMap() {
+    public Map getParameterMap() {
         return null;
     }
 
@@ -235,7 +224,7 @@ public class HttpRequestFacade implements HttpServletRequest {
         return null;
     }
 
-    public Enumeration<Locale> getLocales() {
+    public Enumeration getLocales() {
         return null;
     }
 
@@ -267,31 +256,4 @@ public class HttpRequestFacade implements HttpServletRequest {
         return 0;
     }
 
-    public ServletContext getServletContext() {
-        return null;
-    }
-
-    public AsyncContext startAsync() throws IllegalStateException {
-        return null;
-    }
-
-    public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
-        return null;
-    }
-
-    public boolean isAsyncStarted() {
-        return false;
-    }
-
-    public boolean isAsyncSupported() {
-        return false;
-    }
-
-    public AsyncContext getAsyncContext() {
-        return null;
-    }
-
-    public DispatcherType getDispatcherType() {
-        return null;
-    }
 }

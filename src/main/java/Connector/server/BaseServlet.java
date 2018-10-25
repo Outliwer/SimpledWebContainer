@@ -3,7 +3,7 @@ package Connector.server;
 import javax.servlet.*;
 import java.io.IOException;
 
-public class BaseServlet implements Servlet {
+public abstract class BaseServlet implements Servlet {
 
     public void init(ServletConfig servletConfig) throws ServletException {
 

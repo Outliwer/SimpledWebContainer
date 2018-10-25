@@ -11,7 +11,14 @@ import java.util.Collection;
 import java.util.Locale;
 
 public class HttpResponseFacade implements HttpServletResponse {
+
+    /**
+     * the httpResponse of the servlet
+     */
+    private HttpResponse httpResponse;
+
     public HttpResponseFacade(HttpResponse httpResponse) {
+        this.httpResponse = httpResponse;
     }
 
     public void addCookie(Cookie cookie) {

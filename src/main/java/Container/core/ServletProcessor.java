@@ -38,7 +38,6 @@ public class ServletProcessor {
             System.out.println(e.toString());
         }
         BaseServlet servlet = null;
-
         try {
             servlet = (BaseServlet) myClass.newInstance();
             HttpRequestFacade requestFacade = new HttpRequestFacade(httpRequest);
