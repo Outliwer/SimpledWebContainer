@@ -7,6 +7,7 @@ import Connector.request.HttpRequest;
 import Connector.response.HttpResponse;
 import Connector.server.BaseServlet;
 
+import javax.servlet.Servlet;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -37,9 +38,9 @@ public class ServletProcessor {
         catch (ClassNotFoundException e) {
             System.out.println(e.toString());
         }
-        BaseServlet servlet = null;
+        Servlet servlet = null;
         try {
-            servlet = (BaseServlet) myClass.newInstance();
+            servlet = (Servlet) myClass.newInstance();
             HttpRequestFacade requestFacade = new HttpRequestFacade(httpRequest);
             HttpResponseFacade responseFacade = new HttpResponseFacade(httpResponse);
             servlet.service(requestFacade, responseFacade);
