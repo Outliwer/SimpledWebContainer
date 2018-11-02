@@ -5,7 +5,6 @@ import Connector.facade.HttpRequestFacade;
 import Connector.facade.HttpResponseFacade;
 import Connector.request.HttpRequest;
 import Connector.response.HttpResponse;
-import Connector.server.BaseServlet;
 
 import javax.servlet.Servlet;
 import java.io.File;
