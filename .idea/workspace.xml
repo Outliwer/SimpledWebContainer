@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="使用一个简单基础自Servlet的类发现是可以调用到的，下一步完善doGet方法等以及对参数的返回">
+    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="增加一个类用于验证，同时准备修改BaseServlet类">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Connector/server/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connector/server/BaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Container/core/ServletProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Container/core/ServletProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/index.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +38,7 @@
         <counts>
           <entry key="CLASS" value="5" />
           <entry key="JAVA" value="2738" />
-          <entry key="PLAIN_TEXT" value="217" />
+          <entry key="PLAIN_TEXT" value="248" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -61,7 +58,7 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="java" value="2738" />
-          <entry key="txt" value="217" />
+          <entry key="txt" value="248" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
@@ -108,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/server/BaseServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="285">
+              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#264#265#0" expanded="true" />
@@ -500,7 +497,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541133203079" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541230676526" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -780,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540804307521</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="增加一个类用于验证，同时准备修改BaseServlet类">
+      <created>1541146509200</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1541146509200</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79217000" />
+    <option name="totallyTimeSpent" value="79718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -846,7 +850,8 @@
     <MESSAGE value="重新调整了结构&#10;增加了Servlet需要正常运行的架构" />
     <MESSAGE value="增加fade辅助类来调用request等基本类的使用" />
     <MESSAGE value="使用一个简单基础自Servlet的类发现是可以调用到的，下一步完善doGet方法等以及对参数的返回" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用一个简单基础自Servlet的类发现是可以调用到的，下一步完善doGet方法等以及对参数的返回" />
+    <MESSAGE value="增加一个类用于验证，同时准备修改BaseServlet类" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加一个类用于验证，同时准备修改BaseServlet类" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/File.java">
@@ -1332,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector/server/BaseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#264#265#0" expanded="true" />
