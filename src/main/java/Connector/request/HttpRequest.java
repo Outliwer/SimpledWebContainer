@@ -233,10 +233,10 @@ public class HttpRequest {
 
     }
 
-    public String getAuthType() {
-        return null;
-    }
-
+    /**
+     * get the cookie
+     * @return
+     */
     public Cookie[] getCookies() {
         if (cookies.size() == 0){
             return null;
@@ -245,26 +245,10 @@ public class HttpRequest {
         }
     }
 
-    public long getDateHeader(String s) {
-        return 0;
-    }
-
-    public String getHeader(String s) {
-        return null;
-    }
-
-    public Enumeration<String> getHeaders(String s) {
-        return null;
-    }
-
-    public Enumeration<String> getHeaderNames() {
-        return null;
-    }
-
-    public int getIntHeader(String s) {
-        return 0;
-    }
-
+    /**
+     * get the protocol version of the request
+     * @return
+     */
     public String getHttpVersion(){
         return paramMap.get("httpVersion");
     }
@@ -283,11 +267,19 @@ public class HttpRequest {
         return paramMap.get("METHOD");
     }
 
-    public String getPathInfo() {
-        return null;
+    /**
+     * get the params map
+     */
+    public Map getParameterMap(){
+        return uriParamMap;
     }
 
-    public String getPathTranslated() {
-        return null;
+    /**
+     * get the value of the key s
+     * @param s
+     * @return
+     */
+    public String getParameter(String s) {
+        return uriParamMap.get(s);
     }
 }

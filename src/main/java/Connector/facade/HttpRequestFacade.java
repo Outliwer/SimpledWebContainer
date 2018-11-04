@@ -24,7 +24,7 @@ public class HttpRequestFacade implements HttpServletRequest {
     }
 
     public String getAuthType() {
-        return httpRequest.getAuthType();
+        return null;
     }
 
     public Cookie[] getCookies() {
@@ -32,23 +32,23 @@ public class HttpRequestFacade implements HttpServletRequest {
     }
 
     public long getDateHeader(String s) {
-        return httpRequest.getDateHeader(s);
+        return 0;
     }
 
     public String getHeader(String s) {
-        return httpRequest.getHeader(s);
+        return null;
     }
 
     public Enumeration<String> getHeaders(String s) {
-        return httpRequest.getHeaders(s);
+        return null;
     }
 
     public Enumeration<String> getHeaderNames() {
-        return httpRequest.getHeaderNames();
+        return null;
     }
 
     public int getIntHeader(String s) {
-        return httpRequest.getIntHeader(s);
+        return 0;
     }
 
     public String getMethod() {
@@ -56,11 +56,11 @@ public class HttpRequestFacade implements HttpServletRequest {
     }
 
     public String getPathInfo() {
-        return httpRequest.getPathInfo();
+        return null;
     }
 
     public String getPathTranslated() {
-        return httpRequest.getPathTranslated();
+        return null;
     }
 
     public String getContextPath() {
@@ -169,7 +169,7 @@ public class HttpRequestFacade implements HttpServletRequest {
     }
 
     public String getParameter(String s) {
-        return null;
+        return httpRequest.getParameter(s);
     }
 
     public Enumeration getParameterNames() {
@@ -181,7 +181,7 @@ public class HttpRequestFacade implements HttpServletRequest {
     }
 
     public Map getParameterMap() {
-        return null;
+        return httpRequest.getParameterMap();
     }
 
     public String getProtocol() {
