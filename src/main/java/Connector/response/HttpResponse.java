@@ -19,12 +19,17 @@ public class HttpResponse {
     /**
      * set the BUFFER_SIZE equal 4096
      */
-    public static int BUFFER_SIZE = 4096;
+    private static int BUFFER_SIZE = 4096;
 
     /**
      * output the result
      */
     OutputStream output;
+
+    /**
+     * the writer
+     */
+    PrintWriter writer;
 
     /**
      * check the outputStream is Committed
@@ -195,4 +200,14 @@ public class HttpResponse {
     private OutputStream getOutputStream(){
         return output;
     }
+
+    /**
+     * get the printer of response
+     * @return
+     */
+    public PrintWriter getWriter() {
+        writer = new PrintWriter(output);
+        return writer;
+    }
+
 }

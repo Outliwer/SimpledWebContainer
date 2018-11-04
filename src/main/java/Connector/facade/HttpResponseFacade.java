@@ -118,7 +118,7 @@ public class HttpResponseFacade implements HttpServletResponse {
     }
 
     public PrintWriter getWriter() throws IOException {
-        return null;
+        return httpResponse.getWriter();
     }
 
     public void setCharacterEncoding(String s) {
