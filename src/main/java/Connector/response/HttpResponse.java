@@ -210,4 +210,11 @@ public class HttpResponse {
         return writer;
     }
 
+    public void finishResponse() throws IOException {
+        sendHeaders();
+        if (writer != null) {
+            writer.flush();
+            writer.close();
+        }
+    }
 }

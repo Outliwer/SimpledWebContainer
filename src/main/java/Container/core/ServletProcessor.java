@@ -43,6 +43,8 @@ public class ServletProcessor {
             HttpRequestFacade requestFacade = new HttpRequestFacade(httpRequest);
             HttpResponseFacade responseFacade = new HttpResponseFacade(httpResponse);
             servlet.service(requestFacade, responseFacade);
+            //used to get the headers
+            httpResponse.finishResponse();
         }
         catch (Exception e) {
             System.out.println(e.toString());
