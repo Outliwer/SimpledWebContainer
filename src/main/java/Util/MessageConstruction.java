@@ -9,6 +9,12 @@ public class MessageConstruction {
 
     private static final String COLON = new String(":");
 
+    /**
+     * the status of response
+     */
+    private static int status = HttpResponseMessage.SC_OK.getStatus();
+
+
     public static String getCRLF() {
         return CRLF;
     }
@@ -23,5 +29,13 @@ public class MessageConstruction {
 
     public static String getColon(){
         return COLON;
+    }
+
+    public void setStatus(int status){
+        this.status = status;
+    }
+
+    public static int getStatus(){
+        return status;
     }
 }

@@ -51,10 +51,6 @@ public class HttpResponse {
      */
     private String contentType;
 
-    /**
-     * the status of response
-     */
-    private int status;
 
 
     public HttpResponse(OutputStream outputStream) {
@@ -83,8 +79,6 @@ public class HttpResponse {
             }
             setHeaders("content-length",String.valueOf(messageLength));
             setHeaders("content-type", ContentTypeFind.findTheType(fileName));
-            // send the header
-            this.status = HttpResponseMessage.SC_OK.getStatus();
             sendHeaders();
             // get the content
             fis = new FileInputStream(file);
@@ -161,9 +155,9 @@ public class HttpResponse {
             sb.append(MessageConstruction.getDefaultVersion());
         }
         sb.append(MessageConstruction.getBlank());
-        sb.append(status);
+        sb.append(MessageConstruction.getStatus());
         sb.append(MessageConstruction.getBlank());
-        sb.append(HttpResponseMessage.SC_OK.getMessage(status));
+        sb.append(HttpResponseMessage.SC_OK.getMessage(MessageConstruction.getStatus()));
         sb.append(MessageConstruction.getCRLF());
         //header construction
         for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
@@ -210,6 +204,10 @@ public class HttpResponse {
         return writer;
     }
 
+    /**
+     * used to sendHeaders
+     * @throws IOException
+     */
     public void finishResponse() throws IOException {
         sendHeaders();
         if (writer != null) {

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="辅助类中还是要考虑和之前一样对文件访问一样对于头部字段的更新">
+    <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="目前未加入正文长度，可正常返回">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +31,7 @@
         <counts>
           <entry key="class" value="25" />
           <entry key="html" value="2" />
-          <entry key="java" value="86" />
+          <entry key="java" value="87" />
           <entry key="png" value="1" />
           <entry key="xml" value="2" />
         </counts>
@@ -38,8 +40,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="3490" />
-          <entry key="PLAIN_TEXT" value="333" />
+          <entry key="JAVA" value="3610" />
+          <entry key="PLAIN_TEXT" value="348" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -50,7 +52,7 @@
           <entry key="CLASS" value="25" />
           <entry key="HTML" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="86" />
+          <entry key="JAVA" value="87" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -58,8 +60,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="5" />
-          <entry key="java" value="3490" />
-          <entry key="txt" value="333" />
+          <entry key="java" value="3610" />
+          <entry key="txt" value="348" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
@@ -67,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="208" column="32" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="32" />
+            <state relative-caret-position="2325">
+              <caret line="159" column="86" selection-start-line="159" selection-start-column="86" selection-end-line="159" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5205#5206#0" expanded="true" />
@@ -83,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="80">
               <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,6 +108,21 @@
                 <element signature="e#15622#15623#0" expanded="true" />
                 <element signature="e#20978#20979#0" expanded="true" />
                 <element signature="e#21003#21004#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding>
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/startup/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/ContentTypeFind.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/HttpRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/HttpResponse.java" />
         <option value="$PROJECT_DIR$/webroot/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/Container/ServletProcessor.java" />
@@ -190,8 +206,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Connector/facade/HttpResponseFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/Container/core/ServletProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connector/facade/PrintWriterFacade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/index.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java" />
       </list>
     </option>
   </component>
@@ -386,7 +403,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541588698718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541589193406" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -492,7 +509,7 @@
       <workItem from="1540211034267" duration="1073000" />
       <workItem from="1541436709996" duration="128000" />
       <workItem from="1541503571770" duration="131000" />
-      <workItem from="1541584842596" duration="2147000" />
+      <workItem from="1541584842596" duration="2519000" />
     </task>
     <task id="LOCAL-00001" summary="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架">
       <created>1529818385695</created>
@@ -711,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541503589583</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="目前未加入正文长度，可正常返回">
+      <created>1541588813247</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1541588813247</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89945000" />
+    <option name="totallyTimeSpent" value="90317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,6 +752,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2786753" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -788,7 +813,8 @@
     <MESSAGE value="增加一个类用于验证，同时准备修改BaseServlet类" />
     <MESSAGE value="重写了request的辅助类，可以正确获取参数，下一步重写response辅助类以便于正常返回" />
     <MESSAGE value="辅助类中还是要考虑和之前一样对文件访问一样对于头部字段的更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="辅助类中还是要考虑和之前一样对文件访问一样对于头部字段的更新" />
+    <MESSAGE value="目前未加入正文长度，可正常返回" />
+    <option name="LAST_COMMIT_MESSAGE" value="目前未加入正文长度，可正常返回" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/OutputStream.java">
@@ -1050,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector/request/HttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1108,20 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="208" column="32" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5205#5206#0" expanded="true" />
-            <element signature="e#5237#5238#0" expanded="true" />
-            <element signature="e#5459#5460#0" expanded="true" />
-            <element signature="e#5488#5489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/PrintWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10305">
@@ -1152,10 +1157,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="80">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/MessageConstruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Connector/response/HttpResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="159" column="86" selection-start-line="159" selection-start-column="86" selection-end-line="159" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5205#5206#0" expanded="true" />
+            <element signature="e#5237#5238#0" expanded="true" />
+            <element signature="e#5459#5460#0" expanded="true" />
+            <element signature="e#5488#5489#0" expanded="true" />
           </folding>
         </state>
       </provider>
