@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab8a617-f128-4ad0-834c-9c1cb638a60a" name="Default" comment="结果">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,6 +17,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="9" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -25,7 +25,7 @@
           <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.41" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -228,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -388,6 +387,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -503,6 +503,7 @@
       <workItem from="1541584842596" duration="2834000" />
       <workItem from="1541688457989" duration="132000" />
       <workItem from="1541753702265" duration="354000" />
+      <workItem from="1541762217385" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="增加了对传入的流的一些判断，并且在 HttpRequest 搭建了一个递归子程序的框架">
       <created>1529818385695</created>
@@ -746,7 +747,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91118000" />
+    <option name="totallyTimeSpent" value="91324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -761,7 +762,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28675282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29159936" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
